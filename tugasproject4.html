@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BANGUN DATAR : Persegi Panjang</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>Persegi Panjang</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Masukan lebar persegi Panjang</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="ipt_lebar"></td>
+			</tr>
+			<tr>
+				<td>Masukan panjang persegi Panjang</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="ipt_panjang"></td>
+			</tr>
+			<tr>
+				<td><button onclick="hitung()">Hitung</button></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Luas persegi panjang</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="opt_luas" disabled></td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+<script type="text/javascript" src="persegiPanjang.js"></script>
+</body>
+<script type="text/javascript">
+var luas;
+var lebar;
+var panjang;
+function hitung() {
+	lebar = parseFloat(document.getElementById("ipt_lebar").value);
+	panjang = parseFloat(document.getElementById("ipt_panjang").value);
+	luas = panjang * lebar;
+	document.getElementById('opt_luas').value = luas;	
+}</script>
+</html>
+
+<style>
+div	{
+	margin: auto ;
+	width: 400px;
+	margin-top: 100px;
+}
+table {
+	border-style: none;
+	border-collapse: collapse;
+	width: 100%;
+}
+th{
+	background-color: #f44336;
+	padding: 5px;
+	border: none;
+	font-size: 16px;
+}
+td{
+	border: none;
+}
+input[type=text]{
+	padding: 10px;
+	width: 380px;
+	border-style: solid;
+	border-color: #6d6e6a;
+	font-size: 16px;
+}
+
+button {
+	width: 100%;
+	height: 40px;
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+</style>
